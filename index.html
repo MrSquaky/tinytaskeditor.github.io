@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyTask Macro Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TinyTask Macro Editor</h1>
+        
+        <div class="upload-section">
+            <label for="fileInput">Upload Macro File:</label>
+            <input type="file" id="fileInput" accept=".rec, .ttr">
+            <button onclick="uploadFile()">Upload</button>
+        </div>
+        
+        <div class="macro-content" id="macroContent"></div>
+        
+        <div class="editor-section">
+            <label for="editor">Edit Macro:</label>
+            <textarea id="editor" rows="10" cols="50" readonly></textarea>
+            <div class="button-group">
+                <button onclick="enableEditing()">Edit Macro</button>
+                <button onclick="saveChanges()">Save Changes</button>
+            </div>
+        </div>
+        
+        <a href="#" download="edited_macro.rec" id="downloadLink" style="display:none;">Download Edited Macro</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
 
